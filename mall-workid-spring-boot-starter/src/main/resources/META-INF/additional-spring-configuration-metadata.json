@@ -1,0 +1,22 @@
+{
+  "properties": [
+    {
+      "name": "work.id.idGenerator.redis.ttl",
+      "type": "java.lang.Integer",
+      "description": "WorkerId 在 Redis 中的 TTL（秒），到期后 workerId 可能被其他实例抢占",
+      "defaultValue": 3600
+    },
+    {
+      "name": "work.id.idGenerator.redis.heartBeatIntervalSecond",
+      "type": "java.lang.Long",
+      "description": "WorkerId 心跳续期间隔（秒）",
+      "defaultValue": 60
+    },
+    {
+      "name": "work.id.idGenerator.redis.workerKeyDelayRemoveSecond",
+      "type": "java.lang.Long",
+      "description": "服务关闭后 WorkerId 延迟删除时间（秒）",
+      "defaultValue": 60
+    }
+  ]
+}

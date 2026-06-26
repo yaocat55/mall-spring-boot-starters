@@ -21,7 +21,22 @@ import java.util.regex.Pattern;
 
 
 /**
- * 全局异常处理器
+ * 全局异常处理器。
+ *
+ * <p>通过 {@code @RestControllerAdvice} 拦截所有控制器抛出的异常，按以下规则分类处理：</p>
+ * <ul>
+ *   <li><strong>BusinessException（业务异常）</strong> — 返回自定义业务错误码与消息</li>
+ *   <li><strong>MethodArgumentNotValidException（参数校验异常）</strong> — 提取 BindingResult
+ *       中的第一条错误消息，返回 400 状态码</li>
+ *   <li><strong>其它异常</strong> — 返回 500 服务器内部错误，日志记录完整堆栈</li>
+ * </ul>
+ *
+ * <p>特殊行为：</p>
+ * <ul>
+ *   <li>当请求头中包含 {@code INNER-REQUEST} 时（微服务间内部调用），直接返回
+ *       {@link org.springframework.http.ResponseEntity} 而非 {@code ApiResult} 格式，
+ *       便于内部调用方精确获取原始异常信息</li>
+ * </ul>
  *
  * @date 2024/1/9 下午1:16
  */
