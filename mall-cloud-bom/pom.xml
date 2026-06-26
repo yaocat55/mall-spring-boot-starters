@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>cn.net.mall</groupId>
+        <artifactId>mall-spring-boot-starters</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>mall-cloud-bom</artifactId>
+    <packaging>pom</packaging>
+
+    <name>Mall Cloud BOM</name>
+    <description>Mall Cloud Bill of Materials — dependency management for all mall-cloud modules and their third-party dependencies</description>
+
+    <properties>
+        <!-- Internal starter versions (default to project version, allow external override) -->
+        <mall-common-core.version>${project.version}</mall-common-core.version>
+        <mall-redis-spring-boot-starter.version>${project.version}</mall-redis-spring-boot-starter.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- ================================================================== -->
+            <!-- Spring Boot BOM                                                     -->
+            <!-- ================================================================== -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>3.3.5</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- ================================================================== -->
+            <!-- Spring Cloud Alibaba BOM                                            -->
+            <!-- ================================================================== -->
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- ================================================================== -->
+            <!-- Mall internal starters & libraries                                  -->
+            <!-- ================================================================== -->
+            <dependency>
+                <groupId>cn.net.mall</groupId>
+                <artifactId>mall-common-core</artifactId>
+                <version>${mall-common-core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.net.mall</groupId>
+                <artifactId>mall-redis-spring-boot-starter</artifactId>
+                <version>${mall-redis-spring-boot-starter.version}</version>
+            </dependency>
+
+            <!-- ================================================================== -->
+            <!-- Redisson                                                            -->
+            <!-- ================================================================== -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${redisson.version}</version>
+            </dependency>
+
+            <!-- ================================================================== -->
+            <!-- Fastjson2                                                           -->
+            <!-- ================================================================== -->
+            <dependency>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2</artifactId>
+                <version>${fastjson2.version}</version>
+            </dependency>
+
+            <!-- ================================================================== -->
+            <!-- JJWT (io.jsonwebtoken)                                              -->
+            <!-- ================================================================== -->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-api</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-impl</artifactId>
+                <version>${jjwt.version}</version>
+                <scope>runtime</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt-jackson</artifactId>
+                <version>${jjwt.version}</version>
+                <scope>runtime</scope>
+            </dependency>
+
+            <!-- ================================================================== -->
+            <!-- Hutool                                                              -->
+            <!-- ================================================================== -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>

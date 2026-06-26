@@ -1,0 +1,14 @@
+cn\net\mall\util\FillUserUtil.class
+cn\net\mall\util\SpringUtil.class
+cn\net\mall\util\RandomUtil.class
+cn\net\mall\entity\BaseEntity.class
+cn\net\mall\util\UuidUtil.class
+cn\net\mall\util\DateFormatUtil.class
+cn\net\mall\util\BigDecimalUtil.class
+cn\net\mall\util\Md5Util.class
+cn\net\mall\util\AssertUtil.class
+cn\net\mall\entity\auth\JwtUserEntity.class
+cn\net\mall\exception\BusinessException.class
+cn\net\mall\util\ApiResultUtil.class
+cn\net\mall\util\ApiResult.class
+cn\net\mall\util\IpUtil.class

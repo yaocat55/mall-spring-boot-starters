@@ -1,0 +1,4 @@
+cn\net\mall\redis\RedisUtil.class
+cn\net\mall\redis\UserTokenHelper.class
+cn\net\mall\redis\TokenHelper.class
+cn\net\mall\config\RedisAutoConfiguration.class
