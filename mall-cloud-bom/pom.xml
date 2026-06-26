@@ -7,7 +7,7 @@
     <parent>
         <groupId>cn.net.mall</groupId>
         <artifactId>mall-spring-boot-starters</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.3</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -21,6 +21,7 @@
         <!-- Internal starter versions (default to project version, allow external override) -->
         <mall-common-core.version>${project.version}</mall-common-core.version>
         <mall-redis-spring-boot-starter.version>${project.version}</mall-redis-spring-boot-starter.version>
+        <mall-workid-spring-boot-starter.version>${project.version}</mall-workid-spring-boot-starter.version>
     </properties>
 
     <dependencyManagement>
@@ -59,6 +60,11 @@
                 <groupId>cn.net.mall</groupId>
                 <artifactId>mall-redis-spring-boot-starter</artifactId>
                 <version>${mall-redis-spring-boot-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.net.mall</groupId>
+                <artifactId>mall-workid-spring-boot-starter</artifactId>
+                <version>${mall-workid-spring-boot-starter.version}</version>
             </dependency>
 
             <!-- ================================================================== -->

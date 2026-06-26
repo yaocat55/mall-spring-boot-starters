@@ -6,7 +6,7 @@
 
     <groupId>cn.net.mall</groupId>
     <artifactId>mall-spring-boot-starters</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.3</version>
     <packaging>pom</packaging>
     <name>Mall Spring Boot Starters</name>
     <description>Mall 生态 Spring Boot Starter 父工程</description>
@@ -23,6 +23,7 @@
         <module>mall-cloud-bom</module>
         <module>mall-common-core</module>
         <module>mall-redis-spring-boot-starter</module>
+        <module>mall-workid-spring-boot-starter</module>
     </modules>
 
     <properties>
@@ -138,6 +139,11 @@
             <dependency>
                 <groupId>cn.net.mall</groupId>
                 <artifactId>mall-redis-spring-boot-starter</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.net.mall</groupId>
+                <artifactId>mall-workid-spring-boot-starter</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>
