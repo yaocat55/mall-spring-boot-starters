@@ -6,7 +6,7 @@
 
     <groupId>cn.net.mall</groupId>
     <artifactId>mall-spring-boot-starters</artifactId>
-    <version>2.0.2</version>
+    <version>2.0.3</version>
     <packaging>pom</packaging>
     <name>Mall Spring Boot Starters</name>
     <description>Mall 生态 Spring Boot Starter 父工程</description>
