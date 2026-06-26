@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.data.redis.core.RedisTemplate;
 
 /**
@@ -71,6 +72,7 @@ public class WorkIdAutoConfiguration {
      * @return WorkIdAllocator 实例
      */
     @Bean
+    @Lazy
     @ConditionalOnMissingBean
     public WorkIdAllocator workIdAllocator(RedisTemplate<String, String> redisTemplate,
                                             SnowFlakeIdWorker snowFlakeIdWorker) {
